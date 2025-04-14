@@ -1,9 +1,15 @@
-
 import React from 'react';
 import PhotoFrame from './PhotoFrame';
 import { ExternalLink } from 'lucide-react';
 import { Button } from './ui/button';
 import { useIsMobile } from '@/hooks/use-mobile';
+
+// Importar las imágenes
+import photo1 from '/public/photos/1.jpg';
+import photo2 from '/public/photos/2.jpg';
+import photo3 from '/public/photos/3.jpg';
+import photo4 from '/public/photos/4.jpg';
+import photo5 from '/public/photos/5.jpg';
 
 interface Photo {
   id: number;
@@ -15,33 +21,33 @@ interface Photo {
 const photos: Photo[] = [
   {
     id: 1,
-    src: 'public/photos/2.jpg',
+    src: photo2, // Usar la importación
     alt: 'SUUU',
     aspectRatio: 'landscape',
   },
   {
     id: 2,
-    src: 'public/photos/3.jpg',
+    src: photo3,
     alt: 'SUUUU',
     aspectRatio: 'landscape',
   },
   {
     id: 3,
-    src: 'public/photos/4.jpg',
+    src: photo4,
     alt: 'SUUUUU',
     aspectRatio: 'landscape',
   },
   {
     id: 4,
-    src: 'public/photos/5.jpg',
+    src: photo5,
     alt: 'SUUUUUU',
     aspectRatio: 'portrait',
-  }
+  },
 ];
 
 const heroPhoto = {
   id: 101,
-  src: 'public/photos/1.jpg',
+  src: photo1, // Usar la importación
   alt: 'JEEJAOJFRID',
   aspectRatio: 'landscape',
 };
@@ -93,4 +99,3 @@ const PhotoAlbum = () => {
 };
 
 export default PhotoAlbum;
-
